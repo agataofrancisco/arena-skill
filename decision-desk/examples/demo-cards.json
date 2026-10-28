@@ -1,0 +1,64 @@
+{
+  "decision": "Raise the coaching price from 2000 to 3500",
+  "round": 3,
+  "options": ["raise-all", "new-clients-only", "keep"],
+  "doNothingOption": "keep",
+  "seats": [
+    {
+      "id": "cash",
+      "label": "Cash and downside",
+      "weight": 3,
+      "scores": { "raise-all": 4, "new-clients-only": 6, "keep": 8 },
+      "confidence": 4,
+      "ruin": "possible",
+      "door": "two-way",
+      "pillarScore": 6,
+      "vote": "amend"
+    },
+    {
+      "id": "demand",
+      "label": "Real demand",
+      "weight": 2,
+      "scores": { "raise-all": 5, "new-clients-only": 7, "keep": 7 },
+      "confidence": 3,
+      "ruin": "none",
+      "door": "two-way",
+      "pillarScore": 7,
+      "vote": "endorse"
+    },
+    {
+      "id": "economics",
+      "label": "Unit economics",
+      "weight": 3,
+      "scores": { "raise-all": 8, "new-clients-only": 7, "keep": 4 },
+      "confidence": 4,
+      "ruin": "possible",
+      "door": "two-way",
+      "pillarScore": 9,
+      "vote": "amend"
+    },
+    {
+      "id": "capacity",
+      "label": "Execution capacity",
+      "weight": 2,
+      "scores": { "raise-all": 7, "new-clients-only": 7, "keep": 5 },
+      "confidence": 3,
+      "ruin": "none",
+      "door": "two-way",
+      "pillarScore": 7,
+      "vote": "endorse"
+    },
+    {
+      "id": "redteam",
+      "label": "Red team",
+      "weight": 2,
+      "scores": { "raise-all": 3, "new-clients-only": 7, "keep": 6 },
+      "confidence": 4,
+      "ruin": "likely",
+      "door": "one-way",
+      "pillarScore": 4,
+      "vote": "dissent"
+    }
+  ],
+  "mitigation": { "endorsedBy": ["redteam"] }
+}
